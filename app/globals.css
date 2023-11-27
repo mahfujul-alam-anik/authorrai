@@ -1,0 +1,232 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-image {
+  background-image: url("/images/authorrai_banner_image.png");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.blue-type-gradient {
+  background: linear-gradient(179deg, #4a73d6, #040d37);
+}
+
+.gradient-color-animation {
+  background: linear-gradient(
+    45deg,
+    #041a47,
+    rgb(10, 12, 119),
+    #02132b,
+    #630458
+  );
+  background-size: 300% 300%;
+  animation: mutliColor 12s ease-in-out infinite;
+}
+
+@keyframes mutliColor {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-combinational {
+  background: linear-gradient(180deg, #04162d00, #040d37, #eeeeee00);
+}
+
+.bg-combinational_two {
+  background: linear-gradient(180deg, #04162d00, #031139, #0b6e7800);
+}
+
+.shadow-glassy {
+  box-shadow: 0px 0px 20px 10px #00000012;
+}
+
+.gradient-line-top:before {
+  content: "";
+  height: 80px;
+  width: 2px;
+  background: linear-gradient(183deg, #d21010, #57c223);
+  position: absolute;
+  top: -80px;
+  left: 50%;
+}
+
+.gradient-line-bottom:after {
+  content: "";
+  height: 80px;
+  width: 2px;
+  background: linear-gradient(183deg, #d21010, #57c223);
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+}
+
+.arrow-icon {
+  left: 47.8%;
+}
+
+@media screen and (max-width: 768px) {
+  .gradient-line-top:before {
+    height: 48px;
+    top: -48px;
+  }
+  .gradient-line-bottom:after {
+    height: 48px;
+    bottom: -48px;
+  }
+  .arrow-icon {
+    bottom: -80px;
+    left: 48.5%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .arrow-icon {
+    left: 46.8%;
+  }
+}
+
+.bg-gradient-video {
+  background: linear-gradient(45deg, #7203a9, #03030c, #101042, #12026c);
+  background-size: 300% 300%;
+  animation: mutliColor 8s ease-in-out infinite;
+}
+
+.neon-shadow {
+  filter: brightness(1.5) drop-shadow(0 0 10px rgba(0, 234, 255, 0.741));
+}
+
+.bg-faq {
+  background-image: url("/images/faq-banner.png");
+  background-position: bottom right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bg-transparent-700 {
+  background: #00000084;
+}
+
+.bg-transparent-400 {
+  background: #0000005e;
+}
+
+.bg-footer {
+  background-image: url("/images/footer-banner.jpg");
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bg-vivid-blur {
+  background: linear-gradient(
+      80deg,
+      rgba(0, 0, 77, 0.749),
+      rgba(255, 0, 76, 0.11)
+    ),
+    url("/images/vivid-blurred-banner.jpg");
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bg-sign-page {
+  background: linear-gradient(324deg, #362602, #101056, #08022a);
+  background-size: 500% 500%;
+  animation: mutliColor 8s ease-in-out infinite;
+}
+
+.bg-signIn {
+  background: #0f183da6;
+}
+
+.bg-google-btn {
+  background: linear-gradient(280deg, #1e293b, #182f55);
+}
+
+.bg-google-btn:hover {
+  background: linear-gradient(45deg, #653097, #4b29e3db);
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(#1b1751, #020617 65%);
+}
+.bg-radial-gradient-pricing {
+  background: radial-gradient(rgb(55, 5, 74), #02061700 65%);
+}
+
+.about-box-shadow {
+  box-shadow: 0px 0px 20px 4px #3730a08a;
+}
+
+.gradient-color-animation-pricing {
+  background: linear-gradient(45deg, #0e1f45, #020617, #26065d);
+  background-size: 300% 300%;
+  animation: mutliColor_ 12s ease-in-out infinite;
+}
+
+@keyframes mutliColor_ {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-user {
+  background: linear-gradient(45deg, #0f172a, #030922, #360d78);
+  background-size: 300% 300%;
+  animation: mutliColor_ 12s ease-in-out infinite;
+}
+
+.animate-scale {
+  animation: scaleAni 2s infinite ease-in-out;
+}
+
+@keyframes scaleAni {
+  0% {
+    transform: scaleX(1.5);
+  }
+  50% {
+    transform: scaleX(1.2);
+  }
+  100% {
+    transform: scaleX(1.5);
+  }
+}

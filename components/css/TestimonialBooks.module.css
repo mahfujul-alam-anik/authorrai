@@ -1,0 +1,65 @@
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.books {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  padding: 30px 0px;
+}
+
+.books:hover .books-slide {
+  animation-play-state: paused;
+}
+
+.books-slide {
+  display: inline-flex;
+  animation: 20s slide infinite linear;
+}
+
+.books-slide img {
+  height: 220px;
+}
+
+@keyframes jumpDownUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.single-book:nth-last-of-type(odd) {
+  animation: 5s jumpDownUp linear infinite;
+}
+
+@keyframes jumpUpDown {
+  0% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
+.single-book:nth-last-of-type(even) {
+  animation: 5s jumpUpDown linear infinite;
+}
+
+.single-book_:first-child {
+  animation: 8s jumpUpDown linear infinite;
+}
+.single-book_:last-child {
+  animation: 8s jumpDownUp linear infinite;
+}

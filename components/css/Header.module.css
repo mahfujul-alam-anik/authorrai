@@ -1,0 +1,39 @@
+/* Add styles for the links and the animated line */
+.header-link {
+  position: relative;
+  text-decoration: none;
+}
+
+.header-link:hover {
+  opacity: 0.8;
+}
+
+.header-link::before {
+  content: "";
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(45deg, #6365f192, #0fa4e99f, #10b98198);
+  transition: width 0.3s ease;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.header-link:hover::before {
+  width: 100%;
+}
+
+.active-link::before {
+  content: "";
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(45deg, #4545e1, #253085, #3b0835);
+  transition: width 0.3s ease;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
